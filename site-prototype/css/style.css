@@ -1,0 +1,55 @@
+/* Main Grid*/
+#left { grid-area: left; }
+#tank { grid-area: tank; }
+#right { grid-area: right; }
+#facts { grid-area: fact; }
+
+.aquarium {
+  display: grid;
+  grid-template-areas:
+    'left tank tank right'
+    'left fact fact right';
+  gap: 10px;
+  background-color: #001424;
+  padding: 10px;
+}
+
+.aquarium > div {
+  background-color: rgba(125, 176, 248, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/* Main Grid Done */
+
+/*Side Tanks*/
+#tL { grid-area: topL; }
+#tR { grid-area: topR; }
+#dL { grid-area: downL; }
+#dR { grid-area: downR; }
+
+.sidebarGrid {
+  display: grid;
+  grid-template-areas:
+    'topL topR'
+    'downL downR';
+  gap: 10px;
+  padding: 10px;
+}
+
+.sidebarGrid > div {
+  background-color: white;
+  padding: 20px 0;
+}
+/* Side Tank Done */
+
+
+h1 {
+ font-size: 45px;
+ text-align: center;
+}
+
+
+#fishtank {
+    height: 500px;
+}
