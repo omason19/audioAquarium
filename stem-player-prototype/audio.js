@@ -112,8 +112,6 @@ let keys= [keys1, keys2, keys3, keys4];
 let guitars= [guitar1, guitar2, guitar3, guitar4];
 let bass= [bass1, bass2, bass3, bass4];
 
-//load play button after 5 seconds
-
 //Find all the buttons
 let drum1Button = $('#drum1Button');
 let drum2Button = $('#drum2Button');
@@ -151,14 +149,15 @@ function soloGroupMember(group, instNumber){
 }
 
 
-//Initialise the audio so it all starts out muted (except for fishtank ambience)
+
+//load play button after 9 seconds
 setTimeout(function(){
   let loading = $("#loading");
   loading.remove();
   let playButton = $("<div id='play' class='button'>Play</div>");
   $("body").prepend(playButton);
 
-  //mutes all the stems and then plays them all
+  //Initialise the audio so it all starts out muted (except for fishtank ambience)
   playButton.click(function(){
     if (tankambience.playing()){
       stems.forEach(function(stem){
