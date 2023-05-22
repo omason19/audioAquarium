@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  width: 400px;
+}
+
+#loading {
+  grid-column: 1 / span 2;
+  background-color: #d3d3d3;
+  color: #333;
+  padding: 20px;
+}
+
+#play {
+  grid-column: 1 / span 2;
+  background-color: #d3d3d3;
+  color: #ff406f;
+  padding: 20px;
+}
+
+.quadrant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #a9c1e0;
+  color: #333;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#drum1Button,
+#drum2Button,
+#drum3Button,
+#drum4Button {
+  background-color: #e6b8af;
+}
+
+#keys1Button,
+#keys2Button,
+#keys3Button,
+#keys4Button {
+  background-color: #d5e8d4;
+}
+
+#guitars1Button,
+#guitars2Button,
+#guitars3Button,
+#guitars4Button {
+  background-color: #f9cb9c;
+}
+
+#bass1Button,
+#bass2Button,
+#bass3Button,
+#bass4Button {
+  background-color: #d9d2e9;
+}
