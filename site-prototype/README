@@ -1,5 +1,6 @@
 To still implement for prototype:
 > add place holder images
-> drag and drop (probably with an API)
+> drag and drop (probably with an API)\
+    https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 > add animation for fish to drop and swim to a spot
 > generate a fact pop up when a new fish is dropped in
