@@ -11,7 +11,7 @@
     'left tank right'
     'left fact right';
   gap: 10px;
-  background-color: #001424;
+  background-color: rgba(125, 176, 248, 0.8) ;
   padding: 10px;
 }
 
@@ -67,4 +67,3 @@ h1 {
 }
 
 
-/* Drag and drop */

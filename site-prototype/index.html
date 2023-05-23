@@ -20,32 +20,33 @@
         <!-- Main Parts -->
         <div class="aquarium">
             <div id="left">
+                <div id="title"><h2>Drums</h2></div>
                 <div class="sidebarGrid">
                     <!-- will have images instead of text -->
-                    <div id="title"><h2>Drums</h2></div>
-                    <div id="tL" id="draggable" draggable="true">TL</div>
-                    <div id="tR" draggable="true">TR</div>
-                    <div id="dL" draggable="true">DL</div>
-                    <div id="dR" draggable="true">DR</div>
+                    
+                    <div id="tL" class="item" draggable="true">TL</div>
+                    <div id="tR" class="item" draggable="true">TR</div>
+                    <div id="dL" class="item" draggable="true">DL</div>
+                    <div id="dR" class="item" draggable="true">DR</div>
                 </div>
                 <h2>Guitar</h2>
-                <div class="sidebarGrid">
-                    <div id="tL" id="draggable" draggable="true">
+                <div class="sidebarGrid" class="box">
+                    <div id="tL" class="item" draggable="true">
                         <img src="assets/starfish.png">
                     </div>
-                    <div id="tR">
+                    <div id="tR" class="item">
                         <img src="assets/starfish.png">
                     </div>
-                    <div id="dL">
+                    <div id="dL" class="item">
                         <img src="assets/starfish.png">
                     </div>
-                    <div id="dR">
+                    <div id="dR" class="item">
                         <img src="assets/starfish.png">
                     </div>
                 </div>
             </div>
 
-            <div id="tank" class="dropzone" id="droptarget" >
+            <div id="tank" class="box">
                 <img id="fishtank" src="assets/fishtank.jpg" alt="Fish tank">
 
             </div>

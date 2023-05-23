@@ -1,54 +1,51 @@
-let dragged;
+/* draggable element */
+const item = document.querySelector('.item');
 
-/* events fired on the draggable target */
-const source = document.getElementById("draggable");
-source.addEventListener("drag", (event) => {
-  console.log("dragging");
+item.addEventListener('dragstart', dragStart);
+
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+    setTimeout(() => {
+        e.target.classList.add('hide');
+    }, 0);
+}
+
+
+/* drop targets */
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach(box => {
+    box.addEventListener('dragenter', dragEnter)
+    box.addEventListener('dragover', dragOver);
+    box.addEventListener('dragleave', dragLeave);
+    box.addEventListener('drop', drop);
 });
 
-source.addEventListener("dragstart", (event) => {
-  // store a ref. on the dragged elem
-  dragged = event.target;
-  // make it half transparent
-  event.target.classList.add("dragging");
-});
 
-source.addEventListener("dragend", (event) => {
-  // reset the transparency
-  event.target.classList.remove("dragging");
-});
+function dragEnter(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
 
-/* events fired on the drop targets */
-const target = document.getElementById("droptarget");
-target.addEventListener(
-  "dragover",
-  (event) => {
-    // prevent default to allow drop
-    event.preventDefault();
-  },
-  false
-);
+function dragOver(e) {
+    e.preventDefault();
+    e.target.classList.add('drag-over');
+}
 
-target.addEventListener("dragenter", (event) => {
-  // highlight potential drop target when the draggable element enters it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.add("dragover");
-  }
-});
+function dragLeave(e) {
+    e.target.classList.remove('drag-over');
+}
 
-target.addEventListener("dragleave", (event) => {
-  // reset background of potential drop target when the draggable element leaves it
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-  }
-});
+function drop(e) {
+    e.target.classList.remove('drag-over');
 
-target.addEventListener("drop", (event) => {
-  // prevent default action (open as link for some elements)
-  event.preventDefault();
-  // move dragged element to the selected drop target
-  if (event.target.classList.contains("dropzone")) {
-    event.target.classList.remove("dragover");
-    event.target.appendChild(dragged);
-  }
-});
+    // get the draggable element
+    const id = e.dataTransfer.getData('text/plain');
+    const draggable = document.getElementById(id);
+
+    // add it to the drop target
+    e.target.appendChild(draggable);
+
+    // display the draggable element
+    draggable.classList.remove('hide');
+}
