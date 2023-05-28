@@ -1,0 +1,81 @@
+/* Main Grid*/
+#left { grid-area: left; }
+#tank { grid-area: tank; }
+#right { grid-area: right; }
+#facts { grid-area: fact; }
+
+.aquarium {
+  display: grid;
+  grid-template-columns: 17% 64% 17%;
+  grid-template-areas:
+    'left tank right'
+    'left fact right';
+  gap: 10px;
+  background-color: rgba(125, 176, 248, 0.8) ;
+  padding: 10px;
+}
+
+.aquarium > div {
+  background-color: rgba(125, 176, 248, 0.8);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 30px;
+  border-width: 4px;
+}
+
+.aquarium > div > img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+/* Main Grid Done */
+
+/*Side Tanks*/
+#title {grid-area: title;}
+#tL { grid-area: topL; }
+#tR { grid-area: topR; }
+#dL { grid-area: downL; }
+#dR { grid-area: downR; }
+
+.sidebarGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    'title title'
+    'topL topR'
+    'downL downR';
+  gap: 10px;
+  padding: px;
+}
+
+.sidebarGrid > div {
+  
+  padding: 5px 0;
+}
+
+.sidebarGrid > div >img{
+  height: 50px;
+  width:50px
+}
+/* Side Tank Done */
+
+
+h1 {
+ font-size: 45px;
+ text-align: center;
+}
+
+.item{
+  scale: 170%;
+}
+
+.drumTank{
+  position: relative;
+  z-index: 3;
+}
+
+#play button:hover {
+  background-color: #455aa0; /*  blue color on hover */
+}
+

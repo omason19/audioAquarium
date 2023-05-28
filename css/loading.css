@@ -1,0 +1,70 @@
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.5s ease;
+    flex-direction: column; /* added to make the loading text and bar stack vertically */
+  }
+  
+  #loading-bar-container {
+    width: 50%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 14px; /* optional: rounds corners of container */
+    margin-top: 20px; /* space between the loading text and the bar */
+  }
+  
+  #loading-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    border-radius: 14px; /* optional: rounds corners of bar */
+    animation: load 9s forwards; /* animation that lasts 9 seconds */
+  }
+  
+  @keyframes load {
+    to {width: 100%;}
+  }
+  
+  #play{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+  }
+  
+  #play button {
+    background-color: #4caf9c; /* Green background */
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block;
+    font-size: 2em; /* Change the font-size to adjust the size */
+    margin: 4px 2px;
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  #play button:hover {
+    background-color: #455aa0; /*  blue color on hover */
+  }
+  

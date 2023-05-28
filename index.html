@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="js/audio.js" defer></script>
+    <title>AudioQuarium</title>
+</head>
+<body>
+    <div id="loading">
+        Loading...
+        <div id="loading-bar-container">
+            <div id="loading-bar"></div>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Big Logo -->
+        <div id="title">
+            <h1>AudioQuarium</h1>
+        </div>
+
+        <!-- Main Parts -->
+        <div class="aquarium">
+            <div id="left">
+                <h2>Drums</h2>
+                <div class="sidebarGrid">
+                    <div class="item" draggable="true">
+                        <img src="assets/drum1.png" id="drum1">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/drum2.png" id="drum2">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/drum3.png" id="drum3">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/drum4.png" id="drum4">
+                    </div>
+                </div>
+                <h2>Guitar</h2>
+                <div class="sidebarGrid">
+                    <div class="item" draggable="true">
+                        <img src="assets/guitars1.png" id="guitars1">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/guitars2.png" id="guitars2">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/guitars3.png" id="guitars3">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/guitars4.png" id="guitars4">
+                    </div>
+                </div>
+            </div>
+            <div id="tank" class="box">
+                <img id="fishtank" src="assets/fishtank.jpg" alt="Fish tank">
+            </div>
+
+            <div id="right">
+                <h2>Keyboard</h2>
+                <div class="sidebarGrid">
+                    <div class="item" draggable="true">
+                        <img src="assets/keys1.png" id="keys1">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/keys2.png" id="keys2">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/keys3.png" id="keys3">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/keys4.png" id="keys4">
+                    </div>
+                </div>
+                <h2>Bass</h2>
+                <div class="sidebarGrid">
+                    <div class="item" draggable="true">
+                        <img src="assets/bass1.png" id="bass1">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/bass2.png" id="bass2">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/bass3.png" id="bass3">
+                    </div>
+                    <div class="item" draggable="true">
+                        <img src="assets/bass4.png" id="bass4">
+                    </div>
+                </div>
+            </div>
+
+            <div id="facts">
+                <h3>Fish Food for Thought</h3>
+                <div id="fishfact">
+                    <!-- Default text -->
+                    <p>Click on any fish to add/remove/change part of the music!</p>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </main>
+</body>
+</html>
