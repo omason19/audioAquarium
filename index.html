@@ -8,8 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/loading.css">
     <link rel="icon" type="image/x-icon" href="assets/icon.png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="js/audio.js" defer></script>
+    <script src="site-prototype/js/site.js" defer></script>
     <title>AudioQuarium</title>
 </head>
 <body>
@@ -30,69 +32,69 @@
         <div class="aquarium">
             <div id="left">
                 <h2>Drums</h2>
-                <div class="sidebarGrid">
-                    <div class="item" draggable="true">
-                        <img src="assets/drum1.png" id="drum1">
+                <div class="sidebarGrid" id="drums" class="group">
+                    <div class="box" id="drum1">
+                        <img src="assets/drum1.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/drum2.png" id="drum2">
+                    <div class="box"id="drum2">
+                        <img src="assets/drum2.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/drum3.png" id="drum3">
+                    <div class="box" id="drum3">
+                        <img src="assets/drum3.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/drum4.png" id="drum4">
+                    <div class="box" id="drum4">
+                        <img src="assets/drum4.png">
                     </div>
                 </div>
                 <h2>Guitar</h2>
-                <div class="sidebarGrid">
-                    <div class="item" draggable="true">
-                        <img src="assets/guitars1.png" id="guitars1">
+                <div class="sidebarGrid" id="guitars" class="group">
+                    <div class="box" id="guitars1">
+                        <img src="assets/guitars1.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/guitars2.png" id="guitars2">
+                    <div class="box" id="guitars2">
+                        <img src="assets/guitars2.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/guitars3.png" id="guitars3">
+                    <div class="box" id="guitars3">
+                        <img src="assets/guitars3.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/guitars4.png" id="guitars4">
+                    <div class="box" id="guitars4">
+                        <img src="assets/guitars4.png">
                     </div>
                 </div>
             </div>
-            <div id="tank" class="box">
+            <div id="tank" class="tank">
                 <img id="fishtank" src="assets/fishtank.jpg" alt="Fish tank">
             </div>
 
             <div id="right">
                 <h2>Keyboard</h2>
-                <div class="sidebarGrid">
-                    <div class="item" draggable="true">
-                        <img src="assets/keys1.png" id="keys1">
+                <div class="sidebarGrid" id="keys" class="group">
+                    <div class="box" id="keys1">
+                        <img src="assets/keys1.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/keys2.png" id="keys2">
+                    <div class="box" id="keys2">
+                        <img src="assets/keys2.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/keys3.png" id="keys3">
+                    <div class="box" id="keys3">
+                        <img src="assets/keys3.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/keys4.png" id="keys4">
+                    <div class="box" id="keys4">
+                        <img src="assets/keys4.png">
                     </div>
                 </div>
                 <h2>Bass</h2>
-                <div class="sidebarGrid">
-                    <div class="item" draggable="true">
-                        <img src="assets/bass1.png" id="bass1">
+                <div class="sidebarGrid" id="bass" class="group">
+                    <div class="box" id="bass1">
+                        <img src="assets/bass1.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/bass2.png" id="bass2">
+                    <div class="box" id="bass2"> 
+                        <img src="assets/bass2.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/bass3.png" id="bass3">
+                    <div class="box" id="bass3">
+                        <img src="assets/bass3.png">
                     </div>
-                    <div class="item" draggable="true">
-                        <img src="assets/bass4.png" id="bass4">
+                    <div class="box" id="bass4">
+                        <img src="assets/bass4.png">
                     </div>
                 </div>
             </div>

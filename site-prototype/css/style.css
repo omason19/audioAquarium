@@ -50,11 +50,12 @@
 }
 
 .sidebarGrid > div {
-  
+  height: 50px;
+  width:50px;
   padding: 5px 0;
 }
 
-.sidebarGrid > div >img{
+.sidebarGrid > div > img{
   height: 50px;
   width:50px
 }

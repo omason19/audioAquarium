@@ -1,51 +1,78 @@
-/* draggable element */
-const item = document.querySelector('.item');
+// $(".box").draggable({
+//     containment: ".aquarium",
+    
+// });
 
-item.addEventListener('dragstart', dragStart);
-
-function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.target.id);
-    setTimeout(() => {
-        e.target.classList.add('hide');
-    }, 0);
-}
-
-
-/* drop targets */
-const boxes = document.querySelectorAll('.box');
-
-boxes.forEach(box => {
-    box.addEventListener('dragenter', dragEnter)
-    box.addEventListener('dragover', dragOver);
-    box.addEventListener('dragleave', dragLeave);
-    box.addEventListener('drop', drop);
-});
+// $("#tank").droppable({
+//     accept: function(draggable) {
+//       var groupId = draggable.parent().attr("id");
+//       return $("#tank").find(".box[data-group='" + groupId + "']").length === 0;
+//     },
+//     drop: function(event, ui) {
+//       // Move the dropped object into the container
+//       ui.draggable.appendTo($(this));
+//     }
+//   });
 
 
-function dragEnter(e) {
-    e.preventDefault();
-    e.target.classList.add('drag-over');
-}
+//   $(function() {
+//     // Make the objects draggable
+//     $(".box").draggable({
+//       revert: function(valid) {
+//         if (!valid) {
+//           // Reset the position of the object being dragged
+//           $(this).data("ui-draggable").originalPosition = {
+//             top: 0,
+//             left: 30
+//           };
+//         }
+//         return !valid; // Only revert if dropped outside a valid container
+//       },
+//       containment: ".aquarium" // Limit dragging within the document body
+//     });
+  
+//     // Make the container accept only one object from each group
+//     $("#fishtank").droppable({
+//       accept: function(box) {
+//         var groupId = box.parent().attr("id");
+//         return $("#container").find(".box[data-group='" + groupId + "']").length === 0;
+//       }
+//     });
+//   });
 
-function dragOver(e) {
-    e.preventDefault();
-    e.target.classList.add('drag-over');
-}
-
-function dragLeave(e) {
-    e.target.classList.remove('drag-over');
-}
-
-function drop(e) {
-    e.target.classList.remove('drag-over');
-
-    // get the draggable element
-    const id = e.dataTransfer.getData('text/plain');
-    const draggable = document.getElementById(id);
-
-    // add it to the drop target
-    e.target.appendChild(draggable);
-
-    // display the draggable element
-    draggable.classList.remove('hide');
-}
+$(function() {
+    // Make the objects draggable
+    $(".box").draggable({
+      revert: function(valid) {
+        if (!valid) {
+          // Reset the position of the object being dragged
+          $(this).data("ui-draggable").originalPosition = {
+            top: 0,
+            left: 30
+          };
+        }
+        return !valid; // Only revert if dropped outside a valid container
+      },
+      containment: "aquarium", // Limit dragging within the document body
+      start: function(event, ui) {
+        // Store the original position and group ID of the dragged object
+        $(this).data("originalPosition", ui.helper.position());
+        $(this).data("group", $(this).parent().attr("id"));
+      }
+    });
+  
+    // Make the container accept only one object from each group
+    $(".fishtank").droppable({
+      accept: function(draggable) {
+        var groupId = draggable.data("group");
+        var existingObject = $(this).find(".draggable[data-group='" + groupId + "']");
+  
+        if (existingObject.length > 0) {
+          // Move the existing object back to its original position
+          existingObject.animate(existingObject.data("originalPosition"));
+        }
+  
+        return true;
+      }
+    });
+  });

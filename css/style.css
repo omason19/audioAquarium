@@ -47,16 +47,20 @@
     'downL downR';
   gap: 10px;
   padding: px;
+  justify-content: space-evenly;
 }
 
 .sidebarGrid > div {
-  
-  padding: 5px 0;
+  position: relative;
+  left: 25%;
+  height: 50px;
+  width: 50px;
+  padding: 15px 0;
 }
 
 .sidebarGrid > div >img{
   height: 50px;
-  width:50px
+  width: 50px;
 }
 /* Side Tank Done */
 
@@ -66,7 +70,7 @@ h1 {
  text-align: center;
 }
 
-.item{
+.box{
   scale: 170%;
 }
 
