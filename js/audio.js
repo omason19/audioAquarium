@@ -1,4 +1,3 @@
-//creating all the howl objects from audio files
 
 console.log('hello');
 let tankambience = new Howl({

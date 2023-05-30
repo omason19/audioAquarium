@@ -10,8 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="js/visual.js" defer></script>
     <script src="js/audio.js" defer></script>
-    <script src="site-prototype/js/site.js" defer></script>
     <title>AudioQuarium</title>
 </head>
 <body>
@@ -63,13 +63,15 @@
                 </div>
             </div>
             <div id="tank" class="tank">
-                <div id="drumsIn"></div>
-                <div id="guitarIn"></div>
-                <div id="keysIn"><img src="assets/keys1.png"></div>
-                <div id="bassIn"></div>
-                <!-- <img id="fishtank" src="assets/fishtank.jpg" alt="Fish tank"> -->
+                <div id="instrumentsIn">
+                    <div id="drumsIn"></div>
+                    <div id="guitarIn"></div>
+                    <div id="keysIn"></div>
+                    <div id="bassIn"></div>
+                </div>
+                <img id="fishtank" src="assets/tankFront.png" alt="Fish tank">
             </div>
-
+            
             <div id="right">
                 <h2>Keyboard</h2>
                 <div class="sidebarGrid" id="keys" class="group">
