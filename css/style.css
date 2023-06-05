@@ -4,6 +4,14 @@
 #right { grid-area: right; }
 #facts { grid-area: fact; }
 
+@font-face {
+  font-family: "balloon";
+  src: url('../assets/Balloons-YYVy.ttf') format('truetype');
+}
+
+body{
+  background-color: #7cadf5;
+}
 .aquarium {
   display: grid;
   grid-template-columns: 17% 64% 17%;
@@ -12,14 +20,16 @@
     'left fact right';
   gap: 10px;
   background-color: rgba(125, 176, 248, 0.8) ;
-  padding: 10px;
+}
+
+#facts{
+  font-size : clamp(1rem, 1.5vw, 2rem);
 }
 
 .aquarium > div {
   background-color: rgba(125, 176, 248, 0.8);
   text-align: center;
-  padding: 15px 0;
-  font-size: 30px;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   border-width: 4px;
 }
 
@@ -32,7 +42,14 @@
 /* Main Grid Done */
 
 /*Side Tanks*/
-#title {grid-area: title;}
+#title {
+  position: absolute;
+  left: 50%;
+  top:8%;
+  transform: translate(-50%, -50%);
+  grid-area: title;
+  font-family: "balloon", Arial, Helvetica, sans-serif;
+}
 #tL { grid-area: topL; }
 #tR { grid-area: topR; }
 #dL { grid-area: downL; }
@@ -66,12 +83,20 @@
 
 
 h1 {
- font-size: 45px;
+ font-size: clamp(1rem, 3vw, 4rem);
  text-align: center;
 }
 
 .box{
   scale: 170%;
+  background-image: url('../assets/bag.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.box img{
+  scale: 50%;
 }
 
 #play button:hover {
@@ -116,11 +141,20 @@ h1 {
 
 #fishtank {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 3;
+  scale:80%;
+}
+
+#backtank {
+  position: absolute;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  scale: 80%;
 }
 
 #instrumentsIn {
@@ -137,6 +171,7 @@ h1 {
 }
 
 #drumsIn, #guitarIn, #keysIn, #bassIn {
+  z-index: 2;
   position: relative;
   width: 19%; /* Adjust these dimensions according to your needs */
   height: 100%; /* Adjust these dimensions according to your needs */
@@ -148,4 +183,8 @@ h1 {
 #drumsIn img, #guitarIn img, #keysIn img, #bassIn img {
   max-width: 50%;
   max-height: 50%;
+}
+
+.invisible img{
+  opacity: 0;
 }
