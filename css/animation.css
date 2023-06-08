@@ -1,0 +1,101 @@
+@keyframes drums {
+  0% {
+    transform: translate(0, 0);
+  }
+  25%
+  {
+    transform: translate(50%, 20%);
+  }
+  50% {
+    transform: translate(230%, 0%);
+  }
+  
+  75%{
+    transform: translate(150%, 20%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#drumsIn {
+  animation: drums 60s infinite;
+}
+
+@keyframes guitars {
+  0% {
+    transform: translate(-20%, -15%);
+  }
+  15% {
+    transform: translate(40%, 10%)
+  }
+  40%
+  {
+    transform: translate(100%, 0%);
+  }
+  75%{
+    transform: translate(-10%, 0%);
+  }
+  100% {
+    transform: translate(-20%, -15%);
+  }
+}
+
+#guitarIn {
+  animation: guitars 50s infinite;
+}
+
+@keyframes keys {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(10%, 10%)
+  }
+  40%
+  {
+    transform: translate(-100%, 0%);
+  }
+  50% {
+    transform: translate(100%, 0%);
+  }
+  
+  75%{
+    transform: translate(0% -80%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#keysIn {
+  animation: keys 40s infinite;
+}
+
+
+@keyframes bass {
+  0% {
+    transform: translate(-20%, -15%);
+  }
+  15% {
+    transform: translate(-40%, 10%)
+  }
+  40%
+  {
+    transform: translate(-250%, 0%);
+  }
+  50% {
+    transform: translate(-90%, -10%);
+  }
+  
+  75%{
+    transform: translate(-10%, 0%);
+  }
+  100% {
+    transform: translate(-20%, -15%);
+  }
+}
+
+#bassIn {
+  animation: bass 60s infinite;
+}

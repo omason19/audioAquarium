@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="icon" type="image/x-icon" href="assets/icon.png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="js/visual.js" defer></script>
     <script src="js/audio.js" defer></script>
+    <script src="js/animation.js" defer></script>
     <title>AudioQuarium</title>
 </head>
 <body>
@@ -109,8 +111,8 @@
 
             <div id="facts">
                 <div id="fishfact">
-                    <!-- Default text -->
-                    <p>Click on any fish to add/remove/change part of the music!</p>
+                    <div id="FishFactName"></div>
+                    <p id="FishFactBody">Click on any fish to add/remove/change part of the music!</p>
                 </div>
             </div>
         </div>

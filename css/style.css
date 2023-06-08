@@ -8,9 +8,14 @@
   font-family: "balloon";
   src: url('../assets/Balloons-YYVy.ttf') format('truetype');
 }
+@font-face {
+  font-family: "round";
+  src: url('../assets/round.woff') format('woff');
+}
 
 body{
   background-color: #7cadf5;
+  font-family: "round", Arial, Helvetica, sans-serif;
 }
 .aquarium {
   display: grid;
@@ -83,7 +88,7 @@ body{
 
 
 h1 {
- font-size: clamp(1rem, 3vw, 4rem);
+ font-size: clamp(1rem, 5vw, 5rem);
  text-align: center;
 }
 
@@ -187,4 +192,26 @@ h1 {
 
 .invisible img{
   opacity: 0;
+}
+
+#fishfact{
+  position:relative;
+  justify-content:center;
+  align-items: center;
+  top: -5vw;
+  left: 10%;
+  z-index: 4;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#FishFactName{
+  font-size: 1.4em;  /* Adjust as desired */
+  font-weight: bold;  /* Makes the text thicker */
+}
+
+#FishFactBody{
+
 }
