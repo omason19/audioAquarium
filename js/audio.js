@@ -1,5 +1,4 @@
 
-console.log('hello');
 let tankambience = new Howl({
   src: ['stems/tankamb.mp3'],
   loop: true,
@@ -21,7 +20,7 @@ let drum2 = new Howl({
 let drum3 = new Howl({
   src: ['stems/drum3.mp3'],
   loop: true,
-  volume: 1.0,
+  volume: 0.8,
 });
 
 let drum4 = new Howl({
@@ -102,7 +101,7 @@ let bass4 = new Howl({
   volume: 1.0,
 });
 
-
+Howler.volume(0.7);
 
 
 //create arrays of all the stems and groupings
@@ -230,5 +229,13 @@ bass4Button.click(function(){
   soloGroupMember(bass,3);
 });
 
+
+$(document).ready(function(){
+  $('#volume-slider').on('input change', function() {
+      let volume = $(this).val();
+      volume = volume / 100;  // Convert the range from 0-100 to 0-1 for Howler.js
+      Howler.volume(volume);
+  });
+});
 
 

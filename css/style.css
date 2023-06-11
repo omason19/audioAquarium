@@ -12,9 +12,22 @@
   font-family: "round";
   src: url('../assets/round.woff') format('woff');
 }
+html{
+  background-color: #ece0d7;
+}
+html, body {
+  width: 100%;
+  height: 49vw;
+  margin: 0;
+  padding: 0;
+}
 
 body{
-  background-color: #7cadf5;
+  background-image: url('../assets/aquariumBeach.png');
+  background-image: url('../assets/aquariumBeach.png');
+  background-size: 100vw; /* Add this line */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; 
   font-family: "round", Arial, Helvetica, sans-serif;
 }
 .aquarium {
@@ -24,7 +37,6 @@ body{
     'left tank right'
     'left fact right';
   gap: 10px;
-  background-color: rgba(125, 176, 248, 0.8) ;
 }
 
 #facts{
@@ -32,7 +44,6 @@ body{
 }
 
 .aquarium > div {
-  background-color: rgba(125, 176, 248, 0.8);
   text-align: center;
   font-size: clamp(1rem, 1.5vw, 2rem);
   border-width: 4px;
@@ -212,6 +223,18 @@ h1 {
   font-weight: bold;  /* Makes the text thicker */
 }
 
-#FishFactBody{
+#Volume {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  width: 150px;
+  padding: 5px;
+}
 
+#volume-slider {
+  width: 100%;
+}
+
+#Volume h2{
+  text-align: center;
 }
