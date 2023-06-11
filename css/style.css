@@ -1,7 +1,7 @@
 /* Main Grid*/
-#left { grid-area: left; }
+#left { grid-area: left;}
 #tank { grid-area: tank; }
-#right { grid-area: right; }
+#right { grid-area: right;}
 #facts { grid-area: fact; }
 
 @font-face {
@@ -82,6 +82,7 @@ body{
   padding: px;
   justify-content: space-evenly;
 }
+
 
 .sidebarGrid > div {
   position: relative;
@@ -238,3 +239,4 @@ h1 {
 #Volume h2{
   text-align: center;
 }
+
