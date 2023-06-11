@@ -22,6 +22,17 @@ html, body {
   padding: 0;
 }
 
+#left h2{
+  margin-left:-2vw;
+  padding-left: 15px;
+}
+
+#right h2{
+  margin-right:.8vw;
+  padding-right: 4%;
+}
+
+
 body{
   background-image: url('../assets/aquariumBeach.png');
   background-image: url('../assets/aquariumBeach.png');
